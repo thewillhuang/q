@@ -1,0 +1,24 @@
+{
+  "name": "q",
+  "version": "1.0.0",
+  "description": "a queue system for resolving both online and walk-in patients for a hospital",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thewillhuang/q.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thewillhuang/q/issues"
+  },
+  "homepage": "https://github.com/thewillhuang/q",
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "express": "^4.11.0"
+  }
+}
