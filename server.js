@@ -1,28 +1,31 @@
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = 3000;
+var compression = require('compression');
+var express     = require('express');
+var app         = express();
+var port        = process.env.PORT || 3000;
 var bodyparser  = require('body-parser');
-var path =
+var path        = __dirname + '/build/';
+var mongoose    = require('mongoose');
+var uriUtil     = require('mongodb-uri');
+var options     = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+                    replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } } };
+var mongodbUri  = process.env.MONGOLAB_URI;
+var mongooseUri = uriUtil.formatMongoose(mongodbUri);
 
+mongoose.connect(process.env.MONGO_URL || mongooseUri || 'mongodb://localhost/q_dev', options);
+
+app.enable('etag');
 app.use(bodyparser.json());
+app.use(compression());
+app.use(express.static(path));
 
 app.use(function(req, res, next) {
   console.log(req.method, req.url, req.body);
   next();
 });
 
-app.get('/hi/:one/:two', function(req, res) {
-  res.send('hello ' + req.params.one + ' my name is ' + req.params.two);
-});
-
-app.post('/hi/:var1/:var2', function(req, res) {
-  res.json({
-    one: req.params.var1,
-    two: req.params.var2
-  });
-});
+//routes
 
 app.listen(port);
 console.log('server started at', port);
