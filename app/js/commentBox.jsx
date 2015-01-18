@@ -21,6 +21,7 @@ var CommentBox = React.createClass({
       }.bind(this)
     });
   },
+
   handleCommentSubmit: function(comment){
     //optimistic handling
     var comments = this.state.data;

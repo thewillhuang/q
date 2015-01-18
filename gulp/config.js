@@ -62,7 +62,7 @@ module.exports = {
     //   // external: ['jquery', 'underscore']
     // },
     {
-      entries: src + '/js/commentBox.jsx',
+      entries: src + '/js/all.js',
       dest: dest,
       outputName: 'bundle.js'
     }]

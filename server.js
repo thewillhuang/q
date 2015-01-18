@@ -15,7 +15,8 @@ var path        = __dirname + '/build/';
 
 // mongoose.connect(process.env.MONGO_URL || mongooseUri || 'mongodb://localhost/q_dev', options);
 
-app.set('etag', 'strong');
+app.set('json spaces', 2);
+app.set('etag', 'weak');
 app.use(bodyparser.json());
 app.use(compression());
 app.use(express.static(path));
