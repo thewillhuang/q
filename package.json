@@ -14,24 +14,26 @@
     "type": "git",
     "url": ""
   },
-  "browser": {
-    "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.js"
-  },
-  "browserify-shim": {
-    "bootstrap": {
-      "exports": "bootstrap",
-      "depends": [
-        "jquery:jQuery"
-      ]
+  "//": {
+    "browser": {
+      "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.js"
+    },
+    "browserify-shim": {
+      "bootstrap": {
+        "exports": "bootstrap",
+        "depends": [
+          "jquery:jQuery"
+        ]
+      }
     }
   },
+  "browser": {},
+  "browserify-shim": {},
   "browserify": {
     "transform": [
+      "reactify",
       "browserify-shim",
-      "coffeeify",
-      "hbsfy",
-      "debowerify",
-      "reactify"
+      "debowerify"
     ]
   },
   "devDependencies": {
@@ -68,6 +70,8 @@
     "backbone": "~1.1.2",
     "body-parser": "^1.10.1",
     "express": "^4.10.7",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "react": "^0.12.2",
+    "showdown": "^0.3.1"
   }
 }
