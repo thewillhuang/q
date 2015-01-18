@@ -65,8 +65,7 @@ module.exports = {
       entries: src + '/js/commentBox.jsx',
       dest: dest,
       outputName: 'bundle.js'
-    }
-    ]
+    }]
   },
   production: {
     cssSrc: dest + '/*.css',
