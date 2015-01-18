@@ -71,7 +71,6 @@
     "body-parser": "^1.10.1",
     "express": "^4.10.7",
     "jquery": "~2.1.0",
-    "react": "^0.12.2",
-    "showdown": "^0.3.1"
+    "react": "^0.12.2"
   }
 }

@@ -2,6 +2,10 @@
 var React = require('react');
 var CommentList = require('./commentList.jsx');
 var CommentForm = require('./commentForm.jsx');
+var data = [
+  {author: "WIll", text: "William comment"},
+  {author: "Kate", text: "kate reply"}
+];
 
 var CommentBox = React.createClass({
 
@@ -9,7 +13,7 @@ var CommentBox = React.createClass({
     return (
       <div className='CommentBox'>
         <h1>Comments</h1>
-        <CommentList />
+        <CommentList data={this.props.data}/>
         <CommentForm />
       </div>
     );
@@ -17,7 +21,7 @@ var CommentBox = React.createClass({
 });
 
 React.render(
-  <CommentBox />,
+  <CommentBox data={data}/>,
   document.getElementById('reactRoot')
   );
 
