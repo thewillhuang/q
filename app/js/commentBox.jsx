@@ -3,6 +3,8 @@ var React = require('react');
 var $ = require('jquery');
 var CommentList = require('./commentList.jsx');
 var CommentForm = require('./commentForm.jsx');
+var Timer = require('./timer.jsx');
+var TodoApp = require('./todoApp.jsx');
 
 var CommentBox = React.createClass({
   getInitialState: function() {
@@ -53,6 +55,8 @@ var CommentBox = React.createClass({
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+        <Timer />
+        <TodoApp />
       </div>
     );
   }
@@ -62,5 +66,7 @@ React.render(
   <CommentBox url="../data/data.json" pollInterval={2000}/>,
   document.getElementById('reactRoot')
   );
+
+
 
 module.exports = CommentBox;
