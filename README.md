@@ -14,8 +14,8 @@ This gulp stack was modified from gulp starter to suit my own needs to browserif
 $ npm install
 ```
 
-to optimize all css, js, and html, should lead you to a 100/100 score on pageSpeed
-
+to optimize all css, js, and html.
 ```
 $ gulp production
 ```
+Should lead you to a 100/100 score on pageSpeed
