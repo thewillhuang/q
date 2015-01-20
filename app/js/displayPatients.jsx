@@ -1,11 +1,12 @@
 'use strict';
 var React = require('react');
 
-var DisplayPatient = React.createClass({
+var PatientButton = React.createClass({
 
   getInitialState: function() {
     return {
-      name:''
+      name:'',
+      pressed: false
     };
   },
 
@@ -18,4 +19,4 @@ var DisplayPatient = React.createClass({
 
 });
 
-module.exports = DisplayPatient;
+module.exports = PatientButton;
