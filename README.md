@@ -14,7 +14,7 @@ This gulp stack was modified from gulp starter to suit my own needs to browserif
 $ npm install
 ```
 
-to optimize all css, js, and html.
+Optimize all css, js, and html.
 ```
 $ gulp production
 ```
