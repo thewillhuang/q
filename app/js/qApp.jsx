@@ -20,7 +20,7 @@ var Qbox = React.createClass({
             <Col xs={6} md={4}>
               <SelectPatient />
             </Col>
-            <Col xs={13} md={8}>
+            <Col xs={12} md={8}>
             <DoctorProfile />
             </Col>
           </Row>
