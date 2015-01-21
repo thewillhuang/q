@@ -1,18 +1,26 @@
 'use strict';
 
 var React = require('react');
+var Button = require('react-bootstrap/Button');
+var ButtonToolbar = require('react-bootstrap/ButtonToolbar');
+var DisplayPatients = require('./displayPatients.jsx');
+// var wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
+var Panel = require('react-bootstrap/Panel');
 
 
-var SelectView = React.createClass({
+var PatientBox = React.createClass({
 
   render: function() {
     return (
-      <div>
-      This is patient selection div box
-      </div>
+      <Panel bsStyle="primary" header="Select Name(s)">
+      <ButtonToolbar>
+      <DisplayPatients />
+      <Button className='QueButton' bsStyle="primary" bsSize="large" block>Queue Here</Button>
+      </ButtonToolbar>
+      </Panel>
     );
   }
 
 });
 
-module.exports = SelectView;
+module.exports = PatientBox;

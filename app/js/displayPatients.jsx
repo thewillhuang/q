@@ -1,15 +1,16 @@
 'use strict';
 var React = require('react');
+var Button = require('react-bootstrap/button');
+var ButtonGroup = require('react-bootstrap/ButtonGroup');
 
-var PatientButton = React.createClass({
+var DisplayPatient = React.createClass({
 
   getInitialState: function() {
     return {
-      name:'',
-      pressed: false
+      names: [],
+      isActive: false
     };
   },
-
 
   render: function() {
     return (
@@ -19,4 +20,4 @@ var PatientButton = React.createClass({
 
 });
 
-module.exports = PatientButton;
+module.exports = DisplayPatient;
